@@ -5,7 +5,7 @@ description: A starting point for further customization of uBlue images. Make yo
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/base-main
-image-version: 38 # latest is also supported if you want new updates ASAP
+image-version: 39 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -27,15 +27,12 @@ modules:
       # Hyprland
       - hyprland
       - xdg-desktop-portal-hyprland
-      - xorg-x11-server-Xwayland
 
       # Login Display Manager
       - gdm
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-
-      - xorg-x11-server-Xwayland # conflict
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
