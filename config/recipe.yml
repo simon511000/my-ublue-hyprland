@@ -27,6 +27,7 @@ modules:
       # Hyprland
       - hyprland
       - xdg-desktop-portal-hyprland
+      - xorg-x11-server-Xwayland
 
       # Login Display Manager
       - gdm
