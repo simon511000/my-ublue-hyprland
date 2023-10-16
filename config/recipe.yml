@@ -20,6 +20,10 @@ modules:
                   # should be added into /usr/etc/ as that is the proper "distro"
                   # config directory on ostree. Read more in the files module's README
 
+  - type: script
+    scripts:
+      - remove-preinstalled-xwayland.sh
+
   - type: rpm-ostree
     repos:
       # Hyprland
@@ -62,4 +66,3 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
-      - remove-preinstalled-xwayland.sh
