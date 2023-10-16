@@ -30,6 +30,7 @@ modules:
       # Hyprland
       - hyprland
       - xdg-desktop-portal-hyprland
+      - xorg-x11-server-Xwayland
 
       # nwg-shell
       - nwg-shell
@@ -61,3 +62,4 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
+      - remove-preinstalled-xwayland.sh
